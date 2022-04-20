@@ -22,10 +22,14 @@ import java.nio.charset.StandardCharsets;
  * Description(描述)： 无
  */
 
+
 public class ZooKeeper
 {
     private CuratorFramework client;
 
+    /**
+     * Sets up.
+     */
     @BeforeEach
     void setUp()
     {
@@ -53,6 +57,9 @@ public class ZooKeeper
         client.start();
     }
 
+    /**
+     * Tear down.
+     */
     @AfterEach
     void tearDown()
     {
@@ -62,6 +69,11 @@ public class ZooKeeper
         }
     }
 
+    /**
+     * Test 1.
+     *
+     * @throws Exception the exception
+     */
     @Test
     void test1() throws Exception
     {
@@ -72,6 +84,11 @@ public class ZooKeeper
         System.out.println(new String(bytes, StandardCharsets.UTF_8));
     }
 
+    /**
+     * Test 2.
+     *
+     * @throws Exception the exception
+     */
     @Test
     void test2() throws Exception
     {
